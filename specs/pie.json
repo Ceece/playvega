@@ -2,18 +2,18 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "values": [
-      {
-        "0": "facebook",
-        "1": 42997
-      },
-      {
-        "0": "twitter",
-        "1": 33599
-      },
-      {
-        "0": "instagram",
-        "1": 31955
-      }
+      [
+        "facebook",
+        42997
+      ],
+      [
+        "twitter",
+        33599
+      ],
+      [
+        "instagram",
+        31955
+      ]
     ]
   },
   "mark": "arc",
