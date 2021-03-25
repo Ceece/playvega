@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vega</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <div>
+    <a href="#bar">bar</a>
+    <a href="#bar-group">bar-group</a>
+    <a href="#bar-stack">bar-stack</a>
+    <a href="#bar-stack-percent">bar-stack-percent</a>
+    <a href="#pie">pie</a>
+  </div>
+  <div id="vis"></div>
+  <script>
+    window.onhashchange = function () {
+      const url = window.location.hash.replace(/^#/, './specs/').replace(/$/, '.json')
+      fetch(url)
+        .then(res => res.json())
+        .then(spec => vegaEmbed('#vis', spec))
+    }
+    window.onhashchange()
+  </script>
+</body>
+
+</html>

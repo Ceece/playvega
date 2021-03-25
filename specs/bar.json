@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      [
+        "2021-01-01T00:00:00.000Z",
+        39018
+      ],
+      [
+        "2021-02-01T00:00:00.000Z",
+        41724
+      ],
+      [
+        "2021-03-01T00:00:00.000Z",
+        27809
+      ]
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "1",
+      "type": "quantitative",
+      "title": "Engagements"
+    },
+    "x": {
+      "field": "0",
+      "type": "nominal",
+      "title": "Month",
+      "timeUnit": "month"
+    }
+  },
+  "view": {
+    "stroke": null
+  }
+}

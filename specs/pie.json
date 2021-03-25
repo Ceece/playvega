@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "0": "facebook",
+        "1": 42997
+      },
+      {
+        "0": "twitter",
+        "1": 33599
+      },
+      {
+        "0": "instagram",
+        "1": 31955
+      }
+    ]
+  },
+  "mark": "arc",
+  "encoding": {
+    "theta": {
+      "field": "1",
+      "type": "quantitative",
+      "title": "Engagements"
+    },
+    "color": {
+      "field": "0",
+      "type": "nominal",
+      "title": "Channels"
+    }
+  },
+  "view": {
+    "stroke": null
+  }
+}
