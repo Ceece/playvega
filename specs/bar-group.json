@@ -137,7 +137,7 @@
   "encoding": {
     "x": {
       "field": "1",
-      "title": "Brands"
+      "title": "Terms"
     },
     "y": {
       "type": "quantitative",
@@ -151,7 +151,7 @@
     },
     "color": {
       "field": "1",
-      "title": "Brands"
+      "title": "Terms"
     }
   },
   "view": {

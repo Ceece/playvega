@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A Engagements pyramid for the US in 2000.",
+  "data": {
+    "values": [
+      [
+        1,
+        "fee",
+        17960
+      ],
+      [
+        1,
+        "riders",
+        17446
+      ],
+      [
+        1,
+        "shops",
+        16081
+      ],
+      [
+        1,
+        "promo",
+        10319
+      ],
+      [
+        -1,
+        "fee",
+        22693
+      ],
+      [
+        -1,
+        "riders",
+        15298
+      ],
+      [
+        -1,
+        "promo",
+        12548
+      ],
+      [
+        -1,
+        "shops",
+        16924
+      ]
+    ]
+  },
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "0",
+            "equal": 1
+          }
+        }
+      ],
+      "title": "Positive",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "1",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "2",
+          "title": "Engagements",
+          "axis": {
+            "format": "s"
+          },
+          "sort": "descending"
+        },
+        "color": {
+          "field": "0",
+          "legend": null
+        }
+      }
+    },
+    {
+      "width": 20,
+      "view": {
+        "stroke": null
+      },
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {
+          "field": "1",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": {
+          "field": "1",
+          "type": "ordinal"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "0",
+            "equal": -1
+          }
+        }
+      ],
+      "title": "Negative",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "1",
+          "title": null,
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "2",
+          "title": "Engagements",
+          "axis": {
+            "format": "s"
+          }
+        },
+        "color": {
+          "field": "0",
+          "legend": null
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A Engagements pyramid for the US in 2000.",
+  "data": {
+    "values": [
+      [
+        1,
+        "fee",
+        "lineman",
+        5035
+      ],
+      [
+        1,
+        "fee",
+        "gojek",
+        2665
+      ],
+      [
+        1,
+        "fee",
+        "grabfood",
+        1127
+      ],
+      [
+        1,
+        "riders",
+        "lineman",
+        5969
+      ],
+      [
+        1,
+        "riders",
+        "grabfood",
+        3641
+      ],
+      [
+        1,
+        "riders",
+        "gojek",
+        4396
+      ],
+      [
+        1,
+        "riders",
+        "foodpanda",
+        1207
+      ],
+      [
+        1,
+        "shops",
+        "grabfood",
+        3426
+      ],
+      [
+        1,
+        "shops",
+        "foodpanda",
+        2194
+      ],
+      [
+        1,
+        "shops",
+        "lineman",
+        2175
+      ],
+      [
+        1,
+        "promo",
+        "lineman",
+        3251
+      ],
+      [
+        1,
+        "promo",
+        "foodpanda",
+        1633
+      ],
+      [
+        1,
+        "promo",
+        "gojek",
+        904
+      ],
+      [
+        1,
+        "promo",
+        "grabfood",
+        847
+      ],
+      [
+        -1,
+        "fee",
+        "grabfood",
+        6341
+      ],
+      [
+        -1,
+        "fee",
+        "foodpanda",
+        3015
+      ],
+      [
+        -1,
+        "fee",
+        "gojek",
+        2817
+      ],
+      [
+        -1,
+        "fee",
+        "lineman",
+        1387
+      ],
+      [
+        -1,
+        "riders",
+        "lineman",
+        5483
+      ],
+      [
+        -1,
+        "riders",
+        "gojek",
+        3470
+      ],
+      [
+        -1,
+        "riders",
+        "grabfood",
+        1477
+      ],
+      [
+        -1,
+        "promo",
+        "gojek",
+        3114
+      ],
+      [
+        -1,
+        "promo",
+        "foodpanda",
+        1401
+      ],
+      [
+        -1,
+        "promo",
+        "grabfood",
+        1206
+      ],
+      [
+        -1,
+        "shops",
+        "grabfood",
+        4252
+      ],
+      [
+        -1,
+        "shops",
+        "foodpanda",
+        2466
+      ],
+      [
+        -1,
+        "shops",
+        "lineman",
+        1914
+      ]
+    ]
+  },
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "0",
+            "equal": 1
+          }
+        }
+      ],
+      "title": "Positive",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "1",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "3",
+          "title": "Engagements",
+          "axis": {
+            "format": "s"
+          },
+          "sort": "descending"
+        },
+        "color": {
+          "field": "0",
+          "legend": null
+        },
+        "fill": {
+          "field": "2",
+          "title": "Terms"
+        }
+      }
+    },
+    {
+      "width": 20,
+      "view": {
+        "stroke": null
+      },
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {
+          "field": "1",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": {
+          "field": "1",
+          "type": "ordinal"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "0",
+            "equal": -1
+          }
+        }
+      ],
+      "title": "Negative",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "1",
+          "title": null,
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "3",
+          "title": "Engagements",
+          "axis": {
+            "format": "s"
+          }
+        },
+        "color": {
+          "field": "0",
+          "legend": null
+        },
+        "fill": {
+          "field": "2",
+          "title": "Terms"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}
